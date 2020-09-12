@@ -24,12 +24,12 @@
         <!--left hand column for city search form and list of previous searches-->
         <div class="col-12 col-md-4">
             <!--Search by City Input Form-->
-                <h3>Search for a City:</h3>
-                <form id="city-form">
-                    <label class="form-label" for="city"></label>
-                    <input name="city-input" id="city-input" type="text" autofocus="true" class="form-input" />
-                    <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
-                </form>
+            <h3>Search for a City:</h3>
+            <form id="city-form">
+                <label class="form-label" for="city"></label>
+                <input name="city-input" id="city-input" type="text" autofocus="true" class="form-input" />
+                <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+            </form>
             <!--Previous city searches list-->
             <div id="city-searches-container">
                 <ul id="city-searches">
@@ -37,9 +37,9 @@
                 </ul>
             </div>
         </div>
-        
+
         <!--Section for search city results-->
-        
+
         <div class="col-12 col-md-8">
             <h2>
                 <span id="city-search-term"></span>
@@ -47,17 +47,20 @@
                 <span id="icon"></span>
             </h2>
             <div id="weather-container" class="card"></div>
-                <h3 class="card-header" id="city-title"></h3>
-                <div id="temperature"></div>
-                <div id="humidity"></div>
-                <div id="windspeed"></div>
-                <div id="uv"></div>
+            <h3 class="card-header" id="city-title"><span id="weathericon"><i></i></span></h3>
+            <div id="temperature"></div>
+            <div id="humidity"></div>
+            <div id="windspeed"></div>
+            <div id="uv-container">
+                <div id="uv"></div><span id="uv-data"></span>
+            </div>
             <div>
                 <h2 class="subtitle"><span id="five-day"></span></h2>
                 <div id="forecast-container"></div>
             </div>
         </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/homepage.js"></script>
 </body>
 

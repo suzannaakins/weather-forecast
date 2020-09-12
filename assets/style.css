@@ -15,15 +15,25 @@ h1 {
     background-color: #5aa6f7;
 }
 
-.favorable {
-    color: yellow;
+#uv-data {
+    display: inline-block;
 }
 
-.moderate. {
-    color: orange;
+.favorable {
+    color: white;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+.moderate {
+    color: white;
+    background-color: orange;
+    padding: 10px;
 }
 
 .severe {
-    color: red;
+    color: white;
+    background-color: red;
+    padding: 10px;
 }
 

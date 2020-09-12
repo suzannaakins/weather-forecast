@@ -2,6 +2,8 @@
 var userFormEl = document.querySelector("#city-form");
 //user's city input variable
 var cityInputEl = document.querySelector("#city-input");
+//date variable
+var today = new Date();
 
 //function to capture form input
 var formSubmitHandler = function (event) {
@@ -29,7 +31,7 @@ var getCityWeather = function (cityName) {
         })
         .then(function (data) {
             var cityTitle = document.querySelector("#city-title")
-            cityTitle.textContent = data.name + " Today's Date " + "Icon";
+            cityTitle.textContent = data.name + " (" + today.toLocaleDateString() + ") " + "icon";
             var temp = document.querySelector("#temperature")
             temp.textContent = "Temperature: " + data.main.temp + " °F";
             var humidity = document.querySelector("#humidity")
@@ -46,11 +48,20 @@ var getCityWeather = function (cityName) {
                 })
                 .then(function (data) {
                     var uv = document.querySelector("#uv");
-                    uv.textContent = "UV Index: " + data.value;
+                    uv.textContent = "UV Index: ";
+                    var uvcolor = document.querySelector("#uv-data");
+                    uvcolor.textContent = data.value;
+                    //color code uv
+                    if (data.value >= 8) {
+                        uvcolor.classList.add("severe")
+                    } else if (data.value <= 2) {
+                        uvcolor.classList.add("favorable")
+                    } else {
+                        uvcolor.classList.add("moderate")
+                    }
                 });
         });
 };
-
 
 //calls form submit handler 
 userFormEl.addEventListener("submit", formSubmitHandler);
