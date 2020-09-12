@@ -1,0 +1,13 @@
+NOTES
+
+- NEED TO save cityName to localStorage so that it stays in UL after page refresh
+
+-add 5 cards to HTML for forecast
+
+- assign forecast text content of the cards
+
+- style with CSS
+
+-add icons to current weather and to forecast
+
+- when you CLICK on old cities, it automatically displays again - needs to go to getCityWeather function

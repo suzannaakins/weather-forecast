@@ -13,7 +13,12 @@ var formSubmitHandler = function (event) {
     var cityName = cityInputEl.value.trim();
     //send username to get weather function
     if (cityName) {
+        var oldCities = document.querySelector("#city-searches");
+        oldCities.textContent = cityName;
+        //add to local storage so old city searches stay after a refresh
+        
         getCityWeather(cityName);
+        getCityForecast(cityName);
         //clear the form
         cityInputEl.value = "";
     }
@@ -62,6 +67,22 @@ var getCityWeather = function (cityName) {
                 });
         });
 };
+
+
+var getCityForecast = function (cityName) {
+    var apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&units=imperial&APPID=d3238aef2cf51182a7c4ab1025818a0b";
+    fetch(apiUrl)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            //loop through first 5 items of array (i 0 through 4)
+            for (var i = 0; i < 4; i++) {
+                //display date ( newDate()+(i+1) ), icon (data.weather.main will give description of what icon should be), 
+                //temp (data.main.temp), and humidity(data.main.humidity) for each
+            }
+        });
+}
 
 //calls form submit handler 
 userFormEl.addEventListener("submit", formSubmitHandler);
