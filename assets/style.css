@@ -14,3 +14,16 @@ h1 {
     color: white;
     background-color: #5aa6f7;
 }
+
+.favorable {
+    color: yellow;
+}
+
+.moderate. {
+    color: orange;
+}
+
+.severe {
+    color: red;
+}
+

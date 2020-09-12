@@ -13,24 +13,24 @@
 </head>
 
 <body class="flex-column">
+    <!--HEADER-->
     <header class="header">
         <h1 class="app-title">Weather Dashboard</h1>
     </header>
 
-
+    <!--bootstrap row to hold my two COLUMNS in-->
     <main class="row justify-space-between">
+
+        <!--left hand column for city search form and list of previous searches-->
         <div class="col-12 col-md-4">
             <!--Search by City Input Form-->
-            <div class="card">
                 <h3>Search for a City:</h3>
                 <form id="city-form">
                     <label class="form-label" for="city"></label>
                     <input name="city-input" id="city-input" type="text" autofocus="true" class="form-input" />
                     <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
                 </form>
-            </div>
-            <!--Previous city searches-->
-            <h3>Previous City Searches</h3>
+            <!--Previous city searches list-->
             <div id="city-searches-container">
                 <ul id="city-searches">
 
@@ -41,11 +41,19 @@
         <!--Section for search city results-->
         
         <div class="col-12 col-md-8">
-            <h2 class="subtitle"><span id="city-search-term"></span></h2>
-            <div id="weather-container" class="list-group"></div>
-
+            <h2>
+                <span id="city-search-term"></span>
+                <span id="date"></span>
+                <span id="icon"></span>
+            </h2>
+            <div id="weather-container" class="card"></div>
+                <h3 class="card-header" id="city-title"></h3>
+                <div id="temperature"></div>
+                <div id="humidity"></div>
+                <div id="windspeed"></div>
+                <div id="uv"></div>
             <div>
-                <h2 class="subtitle"><span id="five-day">5-Day Forecast:</span></h2>
+                <h2 class="subtitle"><span id="five-day"></span></h2>
                 <div id="forecast-container"></div>
             </div>
         </div>
