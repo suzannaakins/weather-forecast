@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    color: white;
+    background-color: #3a3a3a;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 30px;
+    padding: 10px 10px;
+}
+
+.search-btn {
+    color: white;
+    background-color: #5aa6f7;
+}

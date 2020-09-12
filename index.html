@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Weather Forecaster</title>
+</head>
+
+<body class="flex-column">
+    <header class="header">
+        <h1 class="app-title">Weather Dashboard</h1>
+    </header>
+
+
+    <main class="row justify-space-between">
+        <div class="col-12 col-md-4">
+            <!--Search by City Input Form-->
+            <div class="card">
+                <h3>Search for a City:</h3>
+                <form id="city-form">
+                    <label class="form-label" for="city"></label>
+                    <input name="city-input" id="city-input" type="text" autofocus="true" class="form-input" />
+                    <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <!--Previous city searches-->
+            <h3>Previous City Searches</h3>
+            <div id="city-searches-container">
+                <ul id="city-searches">
+
+                </ul>
+            </div>
+        </div>
+        
+        <!--Section for search city results-->
+        
+        <div class="col-12 col-md-8">
+            <h2 class="subtitle"><span id="city-search-term"></span></h2>
+            <div id="weather-container" class="list-group"></div>
+
+            <div>
+                <h2 class="subtitle"><span id="five-day">5-Day Forecast:</span></h2>
+                <div id="forecast-container"></div>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/homepage.js"></script>
+</body>
+
+</html>
