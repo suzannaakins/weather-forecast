@@ -1,6 +1,6 @@
 NOTES
 
-- NEED TO save cityName to localStorage so that it stays in UL after page refresh
+- NEED TO load cityName from localStorage so that it stays in UL after page refresh
 
 -add 5 cards to HTML for forecast
 
