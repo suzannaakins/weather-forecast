@@ -132,13 +132,17 @@ var getCityForecast = function (cityName) {
             return response.json()
         })
         .then(function (data) {
-            //loop through first 5 items of array (i 0 through 4)
-            for (var i = 0; i < 4; i++) {
-                //display date ( newDate()+(i+1) ), icon (data.weather.main will give description of what icon should be), 
-                //temp (data.main.temp), and humidity(data.main.humidity) for each
+            for (i=0; i<4; i++) {
+                var date = document.querySelector("#day1");
+                date.textContent = data[i].list.dt_txt;
+
             }
-        });
-}
+            //loop through first 5 items of array (i 0 through 4)
+                console.log(data.list.main.temp)
+                //display date ( newDate()+(i+1) ), icon (data.weather.icon), 
+                //temp (data.main.temp), and humidity(data.main.humidity) for each
+            })
+    };
 
 // //load previous searches' weather and forecast ON CLICK
 // $(cityButton).click(function () {

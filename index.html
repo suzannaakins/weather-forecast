@@ -38,25 +38,58 @@
         </div>
 
         <!--Section for search city results-->
-
         <div class="col-12 col-md-8">
-            <h2>
-                <span id="city-search-term"></span>
-                <span id="date"></span>
-                <span id="icon"></span>
-            </h2>
-            <div id="weather-container" class="card"></div>
-            <h3 class="card-header" id="city-title"><span id="weathericon"><i></i></span></h3>
-            <div id="temperature"></div>
-            <div id="humidity"></div>
-            <div id="windspeed"></div>
-            <div id="uv-container">
-                <div id="uv"></div><span id="uv-data"></span>
+            <!--Today's Weather-->
+            <div id="weather-container" class="card">
+                <h3 class="card-header" id="city-title"><span id="weathericon"><i></i></span></h3>
+                <div id="temperature"></div>
+                <div id="humidity"></div>
+                <div id="windspeed"></div>
+                <div id="uv-container">
+                    <div id="uv"></div><span id="uv-data"></span>
+                </div>
             </div>
-            <div>
-                <h2 class="subtitle"><span id="five-day"></span></h2>
-                <div id="forecast-container"></div>
+
+            <!--5-Day Forecast-->
+            <div class="card-group">
+
+                <div class="card" id="card1">
+                    <h5 class="card-title" id="day1"></h5>
+                    <i id="icon1"></i>
+                    <p class="card-text" id="temperature1"></p>
+                    <p class="card-text" id="humidity1"></p>
+                </div>
+
+                <div class="card" id="card2">
+                    <h5 class="card-title" id="day2"></h5>
+                    <i id="icon2"></i>
+                    <p class="card-text" id="temperature2"></p>
+                    <p class="card-text" id="humidity2"></p>
+                </div>
+
+                <div class="card" id="card3">
+                    <h5 class="card-title" id="day3"></h5>
+                    <i id="icon3"></i>
+                    <p class="card-text" id="temperature3"></p>
+                    <p class="card-text" id="humidity3"></p>
+                </div>
+
+                <div class="card" id="card4">
+                    <h5 class="card-title" id="day4"></h5>
+                    <i id="icon4"></i>
+                    <p class="card-text" id="temperature4"></p>
+                    <p class="card-text" id="humidity4"></p>
+                </div>
+
+                <div class="card" id="card5">
+                    <h5 class="card-title" id="day5"></h5>
+                    <i id="icon5"></i>
+                    <p class="card-text" id="temperature5"></p>
+                    <p class="card-text" id="humidity5"></p>
+                </div>
+
             </div>
+
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
