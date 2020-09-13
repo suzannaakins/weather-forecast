@@ -145,7 +145,9 @@ var getCityForecast = function (cityName) {
             return response.json()
         })
         .then(function (data) {
-            document.querySelector("#card-group-container").innerHTML = ""
+            var forecastTitle = document.querySelector("#forecastTitle")
+            forecastTitle.textContent = "5-Day Forecast:"
+            document.querySelector("#card-deck-container").innerHTML = ""
             for (var i = 0; i < 40; i = i + 8) {
                 //dynamically create cards
                 var forecastCard = document.createElement("div");
@@ -165,7 +167,7 @@ var getCityForecast = function (cityName) {
                 forecastCard.appendChild(forecastTemp);
                 forecastCard.appendChild(forecastHumidity);
                 //append to card group container
-                var forecastContainer = document.querySelector("#card-group-container");
+                var forecastContainer = document.querySelector("#card-deck-container");
                 forecastContainer.appendChild(forecastCard);
             }
         })
