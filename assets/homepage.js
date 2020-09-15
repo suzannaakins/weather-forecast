@@ -100,7 +100,7 @@ var getCityWeather = function (cityName) {
             var cityTitle = document.querySelector("#city-title")
             cityTitle.textContent = data.name + " (" + today.toLocaleDateString() + ") ";
             var todayIcon = document.createElement("img");
-            todayIcon.setAttribute("src", `http://openweathermap.org/img/w/${data.weather[0].icon}.png`)
+            todayIcon.setAttribute("src", `https://openweathermap.org/img/w/${data.weather[0].icon}.png`)
             cityTitle.appendChild(todayIcon);
             var temp = document.querySelector("#temperature")
             temp.textContent = "Temperature: " + data.main.temp + " °F";
@@ -111,7 +111,7 @@ var getCityWeather = function (cityName) {
             var lat = data.coord.lat;
             var lon = data.coord.lon;
 
-            var uvApiUrl = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&APPID=d3238aef2cf51182a7c4ab1025818a0b";
+            var uvApiUrl = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&APPID=d3238aef2cf51182a7c4ab1025818a0b";
             fetch(uvApiUrl)
                 .then(function (response) {
                     return response.json()
